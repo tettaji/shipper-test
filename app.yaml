@@ -1,32 +1,39 @@
 apiVersion: shipper.booking.com/v1alpha1
 kind: Application
 metadata:
-  name: super-server
+  name: lionelrichieapp
 spec:
   revisionHistoryLimit: 3
   template:
     chart:
-      name: nginx
-      repoUrl: https://storage.googleapis.com/shipper-demo
-      version: 0.0.1
+      name: hello
+      repoUrl: https://raw.githubusercontent.com/tettaji/shipper-test/master/Chart.yaml
+      version: 1.0
     clusterRequirements:
       regions:
       - name: local
     strategy:
       steps:
-      - capacity:
-          contender: 1
+      - name: staging
+        capacity:
           incumbent: 100
-        name: staging
+          contender: 33
         traffic:
+          incumbent: 100
           contender: 0
-          incumbent: 100
-      - capacity:
-          contender: 100
-          incumbent: 0
-        name: full on
+      - name: canary
+        capacity:
+          incumbent: 50
+          contender: 50
         traffic:
-          contender: 100
+          incumbent: 50
+          contender: 50
+      - name: full on
+        capacity:
           incumbent: 0
+          contender: 100
+        traffic:
+          incumbent: 0
+          contender: 100
     values:
       replicaCount: 3

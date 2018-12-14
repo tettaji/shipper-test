@@ -1,0 +1,11 @@
+apiVersion: v1
+entries:
+  hello:
+  - apiVersion: v1
+    created: 2018-12-14T11:27:53.683529+01:00
+    digest: 102560167bd8c76159523d92847efcfde45b12fe7eaf7651ec8c9ce10f64034d
+    name: hello
+    urls:
+    - hello-1.tgz
+    version: "1"
+generated: 2018-12-14T11:27:53.682269+01:00
