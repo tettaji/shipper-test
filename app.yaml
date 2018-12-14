@@ -8,7 +8,7 @@ spec:
     chart:
       name: hello
       repoUrl: https://raw.githubusercontent.com/tettaji/shipper-test/master/
-      version: 1.0
+      version: '1.0'
     clusterRequirements:
       regions:
       - name: local
