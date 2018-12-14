@@ -25,6 +25,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: hello
+  labels:
+    shipper-lb: production
 spec:
   type: LoadBalancer
   selector:
