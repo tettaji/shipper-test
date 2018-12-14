@@ -1,0 +1,14 @@
+/Users/tariq/workspace/shipper-innoday/Hello1/bin/Debug/netcoreapp2.1/Hello1.deps.json
+/Users/tariq/workspace/shipper-innoday/Hello1/bin/Debug/netcoreapp2.1/Hello1.runtimeconfig.json
+/Users/tariq/workspace/shipper-innoday/Hello1/bin/Debug/netcoreapp2.1/Hello1.runtimeconfig.dev.json
+/Users/tariq/workspace/shipper-innoday/Hello1/bin/Debug/netcoreapp2.1/Hello1.dll
+/Users/tariq/workspace/shipper-innoday/Hello1/bin/Debug/netcoreapp2.1/Hello1.pdb
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.csprojAssemblyReference.cache
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.csproj.CoreCompileInputs.cache
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.RazorAssemblyInfo.cache
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.RazorAssemblyInfo.cs
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.AssemblyInfoInputs.cache
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.AssemblyInfo.cs
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.RazorTargetAssemblyInfo.cache
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.dll
+/Users/tariq/workspace/shipper-innoday/Hello1/obj/Debug/netcoreapp2.1/Hello1.pdb

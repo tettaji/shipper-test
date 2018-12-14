@@ -1,0 +1,5 @@
+managementClusters:
+- name: minikube # name of a context; will also be the Cluster object name
+applicationClusters:
+- name: minikube
+  region: local

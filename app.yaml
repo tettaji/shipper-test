@@ -1,0 +1,32 @@
+apiVersion: shipper.booking.com/v1alpha1
+kind: Application
+metadata:
+  name: super-server
+spec:
+  revisionHistoryLimit: 3
+  template:
+    chart:
+      name: nginx
+      repoUrl: https://storage.googleapis.com/shipper-demo
+      version: 0.0.1
+    clusterRequirements:
+      regions:
+      - name: local
+    strategy:
+      steps:
+      - capacity:
+          contender: 1
+          incumbent: 100
+        name: staging
+        traffic:
+          contender: 0
+          incumbent: 100
+      - capacity:
+          contender: 100
+          incumbent: 0
+        name: full on
+        traffic:
+          contender: 100
+          incumbent: 0
+    values:
+      replicaCount: 3
