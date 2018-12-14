@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello
-        image: tettaji/hello:1
+        image: tettaji/hello:2
         ports:
         - containerPort: 80
