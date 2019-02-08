@@ -33,6 +33,6 @@ action "Pull" {
 action "HTTP client" {
   uses = "swinton/httpie.action@02571a073b9aaf33930a18e697278d589a8051c1"
   needs = ["push"]
-  args = "--auth-type=jwt --auth=$GITHUB_TOKEN POST api.github.com/repos/$GITHUB_REPOSITORY/dispatches Accept:application/vnd.github.everest-preview+json event_type=bla"
-  secrets = ["GITHUB_TOKEN"]
+  args = "--auth-type=jwt --auth=$PAT POST api.github.com/repos/tettaji/actions-test/dispatches Accept:application/vnd.github.everest-preview+json event_type=trigger_other"
+  secrets = ["PAT"]
 }
