@@ -16,7 +16,7 @@ action "login" {
 
 action "push" {
   uses = "actions/docker/cli@aea64bb1b97c42fa69b90523667fef56b90d7cff"
-  args = "push tettaji/hello"
+  args = "push tettaji/hello:${GITHUB_SHA}"
   needs = ["login"]
 }
 
