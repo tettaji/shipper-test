@@ -1,23 +1,23 @@
-workflow "New workflow" {
+workflow "Docker pipeline" {
   on = "push"
-  resolves = ["GitHub Action for Docker"]
+  resolves = ["push"]
 }
 
-action "docker" {
+action "build" {
   uses = "actions/docker/cli@aea64bb1b97c42fa69b90523667fef56b90d7cff"
   args = "build -t tettaji/hello:${GITHUB_SHA} Hello1"
 }
 
-action "docker-1" {
+action "login" {
   uses = "actions/docker/login@aea64bb1b97c42fa69b90523667fef56b90d7cff"
-  needs = ["docker"]
   secrets = ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+  needs = ["build"]
 }
 
-action "GitHub Action for Docker" {
+action "push" {
   uses = "actions/docker/cli@aea64bb1b97c42fa69b90523667fef56b90d7cff"
-  needs = ["docker-1"]
   args = "push tettaji/hello"
+  needs = ["login"]
 }
 
 workflow "Second workflow" {
