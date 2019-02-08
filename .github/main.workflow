@@ -20,16 +20,6 @@ action "push" {
   needs = ["login"]
 }
 
-workflow "Second workflow" {
-  on = "repository_dispatch"
-  resolves = ["Pull"]
-}
-
-action "Pull" {
-  uses = "actions/docker/cli@aea64bb1b97c42fa69b90523667fef56b90d7cff"
-  args = "pull tettaji/hello"
-}
-
 action "HTTP client" {
   uses = "swinton/httpie.action@02571a073b9aaf33930a18e697278d589a8051c1"
   needs = ["push"]
